@@ -17,8 +17,9 @@ const client = nodemailer.createTransport({
 module.exports.hello = (event, context, callback) => {
   let mailOptions = {
     to: 'info@simplabs.com',
-    subject: `Message from ${event.name} regarding simplabs.com`,
-    text: `${event.message} '\n \n Answer to: ${event.email}`,
+    subject: `${event.name} via simplabs.com`,
+    text: event.message,
+    replyTo: event.email
   };
 
   client.sendMail(mailOptions, (error) => {
