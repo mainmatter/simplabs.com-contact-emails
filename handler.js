@@ -22,15 +22,5 @@ module.exports.hello = (event, context, callback) => {
     replyTo: event.email
   };
 
-  client.sendMail(mailOptions, (error) => {
-    if (error) {
-      callback(new Error(error));
-    }
-
-    const response = {
-      statusCode: 200,
-    };
-
-    callback(null, response);
-  });
+  client.sendMail(mailOptions, (err) => callback(err));
 };
