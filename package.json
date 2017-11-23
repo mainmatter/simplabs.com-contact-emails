@@ -4,7 +4,8 @@
   "description": "AWS Lambda function for sending emails via the contact form on simplabs.com",
   "main": "handler.js",
   "scripts": {
-    "test": "eslint '**/*.js'"
+    "test": "eslint '**/*.js'",
+    "deploy": "serverless deploy"
   },
   "repository": {
     "type": "git",
