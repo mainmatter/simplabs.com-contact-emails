@@ -1,0 +1,25 @@
+{
+  "name": "simplabs.com-contact-emails",
+  "version": "1.0.0",
+  "description": "AWS Lambda function for sending emails via the contact form on simplabs.com",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplabs/simplabs.com-contact-emails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simplabs/simplabs.com-contact-emails/issues"
+  },
+  "homepage": "https://github.com/simplabs/simplabs.com-contact-emails#readme",
+  "devDependencies": {
+    "serverless": "^1.24.1"
+  },
+  "dependencies": {
+    "nodemailer": "^4.4.0"
+  }
+}
