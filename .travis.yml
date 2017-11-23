@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+  - "6"
+
+sudo: false
+dist: trusty
+
+cache:
+  yarn: true
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
+
+install:
+  - yarn install --pure-lockfile
+
+script:
+  - yarn test
+
+env:
+  global:
+    - secure: C9CJRDGaad0yy1I8nXudRkWbpKxxqSNXkobcH/rZUfeIfgu2krLz4qF0N5t4NogXRXc8auiC9wZMYRmfcz+oFnIqmsoGTySXiDU56OCFiu0mQP7GtZlwZ25nVcWYyRh0HwdW5uT0mWz54AhvQdqmE3x/ADroxOsf7BdY9RF1usPdeRg7ulFih5of4yUgiexM9ZedLfXTKUOB4t5Alck1NvqMZ/sY/QdQ0+VF3e/UgZZ1q1n9/PQJm88hmmZichsBvdBBx5GJUK5H1WFtuwY6rJzYzxbiDKkJFaR7Ldr07PBmYwB4GmsJIGfior24u1RKpGXtCV5o3bRva+vMNYpCC7jw70NkptdQh5q/s+uOLVMxU1R0/el7MrDzIHUDJm6IBJV8usIxLyrdVuWhbpkQE6ySY8dYJ6wkocAHb48Fk0RCpAzbmDcy6ahgQSwcqw/lGTFD3TvEFFieQQgmrRXX2Z2EPRaVoRJv+F8gB4flaYwrwXTgmRTEOlqybCu4dXzV4s4wvcnAe/8Yz7O0HX7XNRdLINvEv7l7JdZtA0obbsOrZZil8PyhS/IQwK0uQWhJvFskxw5PDO/InRm9ETxW4VLMtMkQWiP9DKgIBEUL4TAKu+Mm4T3OzrdDjuc6T+pErxP2Fk9LNvH3OmXn1q68e2Bs7XHH5hOGcjzeBwQVyhk=
+    - secure: oLn7x1QaFI5FaWt02QP3p9EBMrxc5A00EahUtvFjH0VfXbapqlJLS6xBCvYLLTL9SW2sjoUF/CJObjoqIK6AwU2WRS3mTMz/tVPzjgw0y5SbH3SsxmVNAyDsfHsYl6NdB5gqsxobh/8RPZvlmGaFf0hTkn/LU9XXM2Jpp2yPtBPVXui+O7qpysZNE5u2I0ntl+LmdfwJKCV53BatAo4ZU7Jb+HreItWiVcs6wRZzqVgTiD0vwANz+HxHJrz/L5y7qB9oVF/QqIVfHs4xcghP+vgrdgoZiZJDQnHlpUZxA22W0kkv9nH5Ej4AEt1IScY8HLUlA5WkTRbRQL7oefvZFDIt/mxfWp/bnyxFj2tbAFZzrAJP3Sy9mkMc5p8oeAHje6d/bwnSvh4jQywvCFo28REu8xWysH8pVkfwyfHRs1DOcRgP4g81e9PTj5Gdn8JeOjNBoz2mJJFa2BtaTpdi4K5HvQ3flhbW3GO/6ktpuk8sGyMF1SGYCk9RgkxIzbDp/mNQPznyxkiYr95fRg3A2VsRvg8NcGq97JiFJ6cXRPhAeMMEP/V/WHT89wUClXHjDiwLYLykqIaadjzaydwBI0Rdf8Obh2F2By01ojxSFkmVi0bJUtt+y9AfquLOXE+5+nmOLkRD6H6gQmVMR6Ep+f94KcszAHU8T6kbzdXKnHw=
+
+deploy:
+  provider: script
+  script: scripts/deploy.sh
