@@ -29,10 +29,6 @@ module.exports.hello = (event, context, callback) => {
 
     const response = {
       statusCode: 200,
-      body: JSON.stringify({
-        message: 'Yehaaa, it worked! Check your mails!',
-        input: event,
-      }),
     };
 
     callback(null, response);
