@@ -24,7 +24,7 @@ module.exports.hello = (event, context, callback) => {
 
   client.sendMail(mailOptions, (error) => {
     if (error) {
-      callback(error);
+      callback(new Error(error));
     }
 
     const response = {
