@@ -20,7 +20,7 @@
   "devDependencies": {
     "eslint": "^4.11.0",
     "eslint-config-simplabs": "^0.4.0",
-    "serverless": "^1.47.0"
+    "serverless": "^1.64.0"
   },
   "dependencies": {
     "nodemailer": "^4.4.0"
