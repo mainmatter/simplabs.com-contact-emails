@@ -4,6 +4,7 @@
 import nodemailer from "nodemailer";
 
 export default async function (request, response) {
+  console.log(process.env.GOOGLE_PRIVATE_KEY);
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
