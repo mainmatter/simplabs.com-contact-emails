@@ -4,7 +4,7 @@
   "description": "AWS Lambda function for sending emails via the contact form on simplabs.com",
   "main": "handler.js",
   "scripts": {
-    "test": "eslint '**/*.js'",
+    "lint": "eslint '**/*.js'",
     "deploy": "serverless deploy"
   },
   "repository": {
@@ -18,11 +18,13 @@
   },
   "homepage": "https://github.com/simplabs/simplabs.com-contact-emails#readme",
   "devDependencies": {
-    "eslint": "^4.11.0",
-    "eslint-config-simplabs": "^0.4.0",
-    "serverless": "^1.47.0"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5"
   },
   "dependencies": {
-    "googleapis": "^41.0.1"
+    "@now/node": "^1.5.1",
+    "nodemailer": "^6.4.6"
   }
 }

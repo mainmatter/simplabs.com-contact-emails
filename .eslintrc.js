@@ -1,5 +1,7 @@
 module.exports = {
-  extends: [
-    'simplabs',
-  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+  "parser": "babel-eslint"
 };
