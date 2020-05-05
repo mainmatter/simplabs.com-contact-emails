@@ -29,6 +29,7 @@ export default async function (request, response) {
     await transporter.sendMail({
       from: "contact@simplabs.com",
       to: "info@simplabs.com",
+      bcc: "simplabs@pipedrivemail.com",
       subject: `${request.body.name || "Message"} via simplabs.com`,
       text: request.body.message,
       replyTo: request.body.email,
