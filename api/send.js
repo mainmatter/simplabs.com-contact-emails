@@ -11,7 +11,7 @@ const {
 const GOOGLE_PRIVATE_KEY = atob(GOOGLE_PRIVATE_KEY_BASE64);
 
 export default async function (request, response) {
-  console.log(GOOGLE_PRIVATE_KEY);
+
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
