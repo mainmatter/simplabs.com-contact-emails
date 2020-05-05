@@ -94,6 +94,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@now/build-utils@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@now/build-utils/-/build-utils-2.2.1.tgz#9e39d76e53bc7d34b2ec9dd74a635309e76e5842"
+  integrity sha512-J+KJxUzQhbTuEVRc7YpqHujypTnOienqnly7xEcGJ/v3BOkY6rtvDvE9bRTyVs8JzGjl3uqiQ/SQsZQPWKZczw==
+
 "@now/node@^1.5.1":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@now/node/-/node-1.5.1.tgz#e0d559ea5d1efaa5cc8a7c35208aa6ad01634ab2"
