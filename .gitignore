@@ -4,3 +4,4 @@ jspm_packages
 
 # Secret data
 key.json
+.now
