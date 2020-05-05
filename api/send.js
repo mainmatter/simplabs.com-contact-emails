@@ -28,10 +28,10 @@ export default async function (request, response) {
       replyTo: request.email,
     });
 
-    response.status(200);
+    response.status(200).end();
   } catch (error) {
     console.error(error);
 
-    response.status(500);
+    response.status(500).end();
   }
 }
