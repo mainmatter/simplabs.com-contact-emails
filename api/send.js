@@ -4,6 +4,8 @@
 import nodemailer from "nodemailer";
 import atob from "atob";
 
+import { addCorsHeaders } from "./_util/cors";
+
 const {
   GOOGLE_CLIENT_ID,
   GOOGLE_PRIVATE_KEY: GOOGLE_PRIVATE_KEY_BASE64,
@@ -11,6 +13,8 @@ const {
 const GOOGLE_PRIVATE_KEY = atob(GOOGLE_PRIVATE_KEY_BASE64);
 
 export default async function (request, response) {
+  addCorsHeaders(response);
+
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
