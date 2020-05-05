@@ -12,7 +12,7 @@ export default async function (request, response) {
       type: "OAuth2",
       user: "contact@simplabs.com",
       serviceClient: process.env.GOOGLE_CLIENT_ID,
-      privateKey: key.GOOGLE_PRIVATE_KEY,
+      privateKey: process.env.GOOGLE_PRIVATE_KEY,
     },
   });
 
@@ -21,9 +21,9 @@ export default async function (request, response) {
     await transporter.sendMail({
       from: "contact@simplabs.com",
       to: "info@simplabs.com",
-      subject: `${request.name} via simplabs.com`,
-      text: request.message,
-      replyTo: request.email,
+      subject: `${request.body.name || "Message"} via simplabs.com`,
+      text: request.body.message,
+      replyTo: request.body.email,
     });
 
     response.status(200).end();
