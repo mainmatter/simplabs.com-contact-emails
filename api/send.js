@@ -3,8 +3,6 @@
 
 import nodemailer from "nodemailer";
 
-const KEY = require("./key.json");
-
 export default async function (request, response) {
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -13,15 +11,15 @@ export default async function (request, response) {
     auth: {
       type: "OAuth2",
       user: "contact@simplabs.com",
-      serviceClient: key.client_id,
-      privateKey: key.private_key,
+      serviceClient: process.env.GOOGLE_CLIENT_ID,
+      privateKey: key.GOOGLE_PRIVATE_KEY,
     },
   });
 
   try {
     await transporter.verify();
     await transporter.sendMail({
-      from: key.client_email,
+      from: "contact@simplabs.com",
       to: "info@simplabs.com",
       subject: `${request.name} via simplabs.com`,
       text: request.message,
