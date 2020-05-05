@@ -2,9 +2,16 @@
 "use strict";
 
 import nodemailer from "nodemailer";
+import atob from "atob";
+
+const {
+  GOOGLE_CLIENT_ID,
+  GOOGLE_PRIVATE_KEY: GOOGLE_PRIVATE_KEY_BASE64,
+} = process.env;
+const GOOGLE_PRIVATE_KEY = atob(GOOGLE_PRIVATE_KEY_BASE64);
 
 export default async function (request, response) {
-  console.log(process.env.GOOGLE_PRIVATE_KEY);
+  console.log(GOOGLE_PRIVATE_KEY);
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -12,8 +19,8 @@ export default async function (request, response) {
     auth: {
       type: "OAuth2",
       user: "contact@simplabs.com",
-      serviceClient: process.env.GOOGLE_CLIENT_ID,
-      privateKey: process.env.GOOGLE_PRIVATE_KEY,
+      serviceClient: GOOGLE_CLIENT_ID,
+      privateKey: GOOGLE_PRIVATE_KEY,
     },
   });
 
