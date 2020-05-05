@@ -2,7 +2,6 @@
 "use strict";
 
 import nodemailer from "nodemailer";
-import { NowRequest, NowResponse } from "@now/node";
 
 const KEY = require("./key.json");
 
