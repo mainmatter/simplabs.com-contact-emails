@@ -4,9 +4,15 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
+const atob = require("atob");
 const bodyParser = require("body-parser");
 
-const { GOOGLE_CLIENT_ID, GOOGLE_PRIVATE_KEY, PORT = 5000 } = process.env;
+const {
+  GOOGLE_CLIENT_ID,
+  GOOGLE_PRIVATE_KEY: GOOGLE_PRIVATE_KEY_BASE64,
+  PORT = 5000,
+} = process.env;
+const GOOGLE_PRIVATE_KEY = atob(GOOGLE_PRIVATE_KEY_BASE64);
 
 express()
   .use(cors())
