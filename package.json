@@ -1,11 +1,11 @@
 {
   "name": "simplabs.com-contact-emails",
   "version": "1.0.0",
-  "description": "AWS Lambda function for sending emails via the contact form on simplabs.com",
+  "description": "Express server for sending emails via the contact form on simplabs.com",
   "main": "handler.js",
   "scripts": {
     "lint": "eslint '**/*.js'",
-    "deploy": "serverless deploy"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,9 @@
   },
   "dependencies": {
     "atob": "^2.1.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "nodemailer": "^6.4.6"
   }
 }
