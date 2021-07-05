@@ -5,6 +5,7 @@
   "main": "handler.js",
   "scripts": {
     "lint": "eslint '**/*.js'",
+    "lint:fix": "eslint '**/*.js' --fix",
     "start": "node index.js"
   },
   "repository": {
