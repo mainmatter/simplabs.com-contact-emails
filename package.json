@@ -1,7 +1,7 @@
 {
-  "name": "simplabs.com-contact-emails",
+  "name": "mainmatter.com-contact-emails",
   "version": "1.0.0",
-  "description": "Express server for sending emails via the contact form on simplabs.com",
+  "description": "Express server for sending emails via the contact form on mainmatter.com",
   "main": "handler.js",
   "scripts": {
     "lint": "eslint '**/*.js'",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/simplabs/simplabs.com-contact-emails.git"
+    "url": "git+https://github.com/Mainmatter/mainmatter.com-contact-emails.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/simplabs/simplabs.com-contact-emails/issues"
+    "url": "https://github.com/Mainmatter/mainmatter.com-contact-emails/issues"
   },
-  "homepage": "https://github.com/simplabs/simplabs.com-contact-emails#readme",
+  "homepage": "https://github.com/Mainmatter/mainmatter.com-contact-emails#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.30.0",

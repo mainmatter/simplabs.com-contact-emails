@@ -1,3 +1,3 @@
-# simplabs.com-contact-emails
+# mainmatter.com-contact-emails
 
-AWS Lambda function for sending emails via the contact form on simplabs.com
+AWS Lambda function for sending emails via the contact form on mainmatter.com

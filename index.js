@@ -25,7 +25,7 @@ express()
       secure: true,
       auth: {
         type: "OAuth2",
-        user: "contact@simplabs.com",
+        user: "contact@mainmatter.com",
         serviceClient: GOOGLE_CLIENT_ID,
         privateKey: GOOGLE_PRIVATE_KEY,
       },
@@ -34,10 +34,10 @@ express()
     try {
       await transporter.verify();
       await transporter.sendMail({
-        from: "contact@simplabs.com",
-        to: "info@simplabs.com",
-        bcc: "simplabs@pipedrivemail.com",
-        subject: `${request.body.name || "Message"} via simplabs.com`,
+        from: "contact@mainmatter.com",
+        to: "info@mainmatter.com",
+        bcc: "Mainmatter@pipedrivemail.com",
+        subject: `${request.body.name || "Message"} via mainmatter.com`,
         text: request.body.message,
         replyTo: request.body.email,
       });
